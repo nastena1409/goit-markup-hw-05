@@ -10,15 +10,47 @@
 --success:#31D0AA;
 }
 
+html {
+box-sizing: border-box;
+}
+
+*,
+*: :before,
+*: :after {
+box-sizing: inherit;
+}
+
 body {
     color: var(--text);
     background-color: var(--white);
 
     font-family: roboto, sans-serif;
+
+    margin: 0;
+}
+
+h1, h2, h3, p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container {
+  
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    border-bottom: 1px solid #E7E9FC;
 }
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /*Студія*/
@@ -33,6 +65,8 @@ body {
 
     text-decoration: none;
     text-transform: uppercase;
+
+    display: inline-block;
 }
 
 .footer-logo {
@@ -43,6 +77,10 @@ body {
 
     text-decoration: none;
     text-transform: uppercase;
+
+    display: inline-block;
+    padding-top: 100px;
+    margin-bottom: 16px;
 }
 
 .web {
@@ -57,9 +95,30 @@ body {
     color: var(--light);
 }
 
+
+
+.main-nav,
+.adress {
+    display: flex;
+    align-items: center;
+}
+    
+
 /*Site nav*/
 
-.link {
+.site-nav {
+    display: flex;
+
+    margin-left: 76px;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.site-nav .link {
+    display: block;
+
     color: var(--dark);
 
     font-weight: 600;
@@ -67,6 +126,9 @@ body {
     line-height: 1.5;
 
     letter-spacing: 0.02em;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .link:hover {
@@ -82,6 +144,14 @@ body {
 }
 
 /*Contacts*/
+
+.contacts {
+    display: flex;
+}
+
+.contacts .item:not(:last-child) {
+    margin-right: 40px;
+}
 
 .contact-link {
     color: var(--text);
@@ -108,11 +178,16 @@ body {
 
 .adress {
     font-style: normal;
+
+    margin-left: auto;
 }
 
 /*Hero*/
+
 .hero {
     background-color: var(--dark);
+    text-align: center;
+    margin-bottom: 120px;
 }
 
 .hero-title {
@@ -122,12 +197,15 @@ body {
     line-height: 1.07;
     letter-spacing: 0.02em;
 
-    text-align: center;
     text-transform: uppercase;
-    
+
+    margin-bottom: 48px;
+    padding-top: 188px;
 }
 
 .hero-btn {
+    display: inline-block;
+
     cursor: pointer;
 
     color: var(--white);
@@ -138,13 +216,20 @@ body {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.04em;
+
+    align-items: center;
+    padding: 16px 32px 16px 32px;
+    min-width: 169px;
+    border-radius: 4px;
+
+    margin-bottom: 188px;
      
     border: transparent;
     font-family: inherit;
 }
 
 
-.features-title, .work-title, .team-title, .portfolio-title {
+.work-title, .team-title, .portfolio-title {
     color: var(--dark);
 
     font-weight: 600;
@@ -152,7 +237,57 @@ body {
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
+    margin-top: 0;
 } 
+
+/*Features*/
+
+.features {
+    margin-bottom: 120px;
+}
+
+.feature-list {
+    display: flex;
+}
+
+.feature-list .item {
+    width: 264px;
+}
+
+.feature-list .item.item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.features-title {
+    color: var(--dark);
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+    display: none;
+}
+
+/*Work*/
+
+.work {
+    margin-bottom: 120px;
+}
+
+.work-list {
+    display: flex;
+}
+
+.work-element {
+    width: 360px;
+    margin-right: 24px;
+}
+
+.work-element:last-child {
+    margin-right: 0;
+}
 
 .title {
     color: var(--dark);
@@ -161,6 +296,8 @@ body {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    margin-bottom: 8px;
 }
 
 .text {
@@ -171,8 +308,33 @@ body {
     letter-spacing: 0.02em;
 }
 
+.work-title, .team-title {
+    margin-bottom: 72px;
+}
+
+/*Team*/
+
 .team {
     background-color: var(--light);
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+}
+
+.team-list {
+    display: flex;
+}
+
+.team-element {
+    margin-right: 24px;
+}
+
+.team-element:last-child {
+    margin-right: 0;
+}
+
+.image {
+    margin-bottom: 32px;
 }
 
 /*Footer*/
@@ -182,10 +344,37 @@ body {
 }
 
 .text.footer-text {
-    color: var(--accent);  
+    color: var(--accent); 
+    padding-bottom: 100px;
+    padding-right: 864px;
 }
 
 /*Портфоліо*/
+
+.portfolio {
+    padding-top: 96px;
+}
+
+.portfolio-title {
+    display: none;
+}
+
+/* .filter-buttons {
+    margin-bottom: 72px;
+} */
+.buttons-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+    
+}
+
+.btn-element {
+    margin-right: 24px;
+}
+.btn-element:last-child {
+    margin-right: 0;
+}
 
 .filter-btn {
     cursor: pointer;
@@ -200,6 +389,11 @@ body {
     letter-spacing: 0.04em;
     
     border: transparent;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
+
+    padding: 12px 24px;
+
 }
 
 .filter-btn:hover {
@@ -216,3 +410,21 @@ body {
     color: var(--primary-brand);
 }
 
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.project-element {
+    margin-right: 24px;
+    margin-bottom: 48px;
+}
+
+.project-element:nth-child(3n) {
+    margin-right: 0;
+}
+
+.project-element:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
