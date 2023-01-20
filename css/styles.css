@@ -198,10 +198,11 @@ h1, h2, h3, p, ul {
     line-height: 1.07;
     letter-spacing: 0.02em;
 
-    width: 494px;
+    width: 496px;
 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 48px;
 }
 
 .hero-btn {
@@ -309,12 +310,12 @@ h1, h2, h3, p, ul {
 }
 
 .work-title, .team-title {
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 /*Team*/
 
-.team .container {
+.team {
     background-color: var(--light);
     padding-top: 120px;
     padding-bottom: 120px;
@@ -339,6 +340,8 @@ img {
 }
 
 .team-content {
+    background-color: #FFFFFF;
+
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -355,6 +358,7 @@ img {
 
 .text.footer-text {
     color: var(--accent); 
+    width: 264px;
     
 }
 
@@ -437,7 +441,10 @@ img {
 }
 
 .project-content {
-    padding: 0px 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 16px;
+    padding-right: 16px;
     border-left: 1px solid #E7E9FC;;
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
