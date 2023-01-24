@@ -1,0 +1,23 @@
+.actions {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid black;
+    list-style: none;
+}
+
+.icon-clock {
+    display: block;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/clock.svg);
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+}
+    
