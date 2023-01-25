@@ -189,22 +189,17 @@ h1, h2, h3, p, ul {
     text-align: center;
     background-color: var(--dark);
 
-    }
-
-.container.overlay {
     max-width: 1440px;
     height: 600px;
     margin-right: auto;
     margin-left: auto;
-
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+    
+     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-
+    }
 
 .hero-title {
     color: var(--white);
@@ -357,7 +352,6 @@ h1, h2, h3, p, ul {
     background-color: var(--light);
     padding-top: 120px;
     padding-bottom: 120px;
-
 }
 
 .team-list {
@@ -392,38 +386,38 @@ img {
     border-radius: 0px 0px 4px 4px;
 }
 
-.social-links {
+.sm-links-list {
     display: flex;
-    flex-direction: row;
     list-style: none;
-    padding: 0;
-    justify-content: space-evenly;
-    margin-top: 8px;
-    
+    padding: 0;   
 }
 
-.social-link {
+.team.sm-links-list {
+    margin-top: 8px;
+    justify-content: space-evenly;
+    background-color: inherit;
+}
+
+.social-media-link {
     display: flex;
     width: 40px;
     height: 40px;
     
-    background-color: var(--primary-brand);
     border-radius: 50%;
 
     cursor: pointer;
 
-    justify-content: center;
-    
-    
+    justify-content: center; 
 }
 
-.social-link:hover {
-    background-color: var(--pressed-state);
-    
+.team .social-media-link {
+    background-color: var(--primary-brand)
 }
 
-.social-link:focus {
+.team .social-media-link:hover,
+.team .social-media-link:focus {
     background-color: var(--pressed-state);
+    
 }
 
 .social-link .icon {
@@ -453,35 +447,34 @@ img {
 }
 
 .customer-link {
-    cursor: pointer;
-}
-
-.customer-link:hover,
-.customer-link:focus {
-    background-color: var(--pressed-state);
+    width: 168px;
+    height: 88px;
 }
 
 .client-logo {
     display: flex;
     justify-content: center;
 
-    width: 168px;
-    height: 88px;
-
+    width: 100%;
+    height: 100%;
     border: 1px solid #8E8F99;
     border-radius: 4px;
 }
 
+.client-logo:hover,
+.client-logo:focus {
+    border: 1px solid var(--pressed-state);
+}
+
 .icon {
-    width: 104px;
-    height: 56px;
+    
     align-self: center; 
     fill: #8E8F99;     
 }
 
-.icon:hover,
-.icon:focus {
-    fill: var(--white);
+.icon.current:hover,
+.icon.current:focus {
+    fill: var(--pressed-state);
 }
 
 /*Footer*/
@@ -506,11 +499,8 @@ img {
     width: 264px; 
 }
 
-.footer .footer-thumb {
-    display: block;
-    
-    width: 208px;
-    margin-top: 0;
+.footer-thumb {
+    display: block; 
 }
 
 .text.link-text {
@@ -524,39 +514,20 @@ img {
     color: #FFFFFF;
 }
 
-.footer-thumb {
-    display: flex;
-    
-
-}
-
-.footer-social-links {
-    display: flex;
-    
-    list-style: none;
-    padding: 0;
+.footer.sm-links-list {
     gap: 16px;
     
     margin-top: 16px; 
+    padding: 0;
+} 
+
+.footer .social-media-link {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social-link {
-    display: flex;
-
-    width: 40px;
-    height: 40px;
-
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    justify-content: center;   
-}   
-
-.footer-social-link .icon {
-    width: 24px;
-    height: 24px;     
+.social-media-link:hover,
+.social-media-link:focus {
+    background-color: var(--success)
 }
 
 
@@ -627,31 +598,29 @@ img {
     
 }
 
-.project-element {
+.project-link {
     margin-right: 24px;
     margin-bottom: 48px;
 
     cursor: pointer;
 }
 
-.project-element:hover,
-.project-element:focus {
+.project-link:hover,
+.project-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.project-element:nth-child(3n) {
+.project-link:nth-child(3n) {
     margin-right: 0;
 }
 
-.project-element:nth-last-child(-n + 3) {
+.project-link:nth-last-child(-n + 3) {
     margin-bottom: 0;
 }
 
 .project-content {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 16px;
-    padding-right: 16px;
+    
+    padding: 32px 16px;
     border-left: 1px solid #E7E9FC;;
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
