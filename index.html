@@ -49,7 +49,19 @@
       <!--Hero-->
       <section class="hero"> 
               <h1 class="hero-title">Effective Solutions for Your Business</h1>
-              <button class="hero-btn" type="button">Order Service</button>                 
+
+              <button data-modal-open class="hero-btn" type="button">Order Service</button>    
+              <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                
+                  <button class="close-btn" data-modal-close>
+                    <svg class="close-icon">
+                      <use href="./images/icons.svg" width="8px" height="8px"></use>
+                    </svg>
+                  </button>
+                  
+                </div>
+              </div>             
       </section>
         
         
@@ -448,6 +460,7 @@
       </div>
       
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
 

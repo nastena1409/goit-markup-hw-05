@@ -240,6 +240,72 @@ h1, h2, h3, p, ul {
     font-family: inherit;
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 576px;
+    min-width: 408px;
+     
+    background-color: #FCFCFC;
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close-btn {
+    display: flex;
+    background-color: #E7E9FC;
+
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-left: auto;
+    margin-top: 24px;
+    margin-right: 24px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    justify-content: center;
+
+
+    /* width: 24px;
+    height: 24px;
+    
+    margin-left: auto;
+    margin-top: 24px;
+    margin-right: 24px;
+    padding: 0;
+
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 8px 8px; */
+}
+
+.close-icon {
+    width: 8px;
+    height: 8px;
+    align-self: center;
+}
 
 .work-title, .team-title, .portfolio-title, .customers-title {
     color: var(--dark);
@@ -618,10 +684,63 @@ img {
     margin-bottom: 0;
 }
 
+
 .project-content {
     
     padding: 32px 16px;
     border-left: 1px solid #E7E9FC;;
     border-right: 1px solid #E7E9FC;
-    border-bottom: 1px solid #E7E9FC;
+    border-bottom: 1px solid #E7E9FC;    
 }
+
+.project-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-brand);
+    transform: translatey(100%);
+    transition: transform 250ms ease;
+}
+
+.overlay-text {
+    font-size: 16px;
+    line-height: 1.5;
+        
+    letter-spacing: 0.02em;
+    color: var(--light);
+    text-align: justify;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.project-thumb:hover .overlay,
+.project-thumb:focus .overlay {
+transform: translatey(0);
+}
+ 
+
+/* .project-thumb::before {
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-brand);
+    position: absolute;
+    opacity: 0;
+    transform: translatey(100%);
+}
+
+.project-thumb:hover::before {
+    opacity: 1;
+    transform: translatey(0);
+} */
